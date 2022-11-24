@@ -1,0 +1,13 @@
+name: Clear Caches Pipe
+description: Similar to atlassian/bitbucket-clear-cache, but it check for file checksum first.
+category: Workflow automation
+image: luuhai48/clear-bitbucket-cache:latest
+repository: https://github.com/luuhai48/clear-bitbucket-cache.git
+maintainer:
+  name: luuhai48
+  website: https://luuhai48.github.io
+tags:
+  - pipelines
+  - pipes
+  - build
+  - bitbucket

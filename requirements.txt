@@ -1,0 +1,2 @@
+requests==2.28.1
+bitbucket_pipes_toolkit==3.2.1
