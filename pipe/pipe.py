@@ -39,6 +39,7 @@ def run_pipe():
     pipe.log_info("Executing the pipe...")
 
     if os.path.exists(CACHE_CHECKSUM_DIR):
+        pipe.log_info("Cache checksum dir found")
         CHECKS = []
         for file_path in pipe.get_variable("CHECKSUM_FILES"):
             if os.path.exists(f"{CACHE_CHECKSUM_DIR}/{file_path}"):
@@ -57,6 +58,7 @@ def run_pipe():
             pipe.success("File(s) not changed. Skipping...")
             return
     else:
+        pipe.log_info("Cache checksum dir not found. Creating one...")
         os.makedirs(CACHE_CHECKSUM_DIR)
 
     workspace = pipe.get_variable("WORKSPACE")
